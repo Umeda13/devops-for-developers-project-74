@@ -1,16 +1,13 @@
-version: "3.9"
-
 services:
   app:
     image: umeda13/devops-for-developers-project-74:demo
-    build:
-      context: ./app
+    build: .
     container_name: fastify-blog
     working_dir: /app
     ports:
       - "8080:8080"
     volumes:
-      - ./app:/app
+      - ./:/app
     command: make setup && make test
     environment:
       DATABASE_HOST: db

@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 # JS Fastify Blog
 
 [![Main](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml/badge.svg)](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml)
 
 ![CI](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
+
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Umeda13/devops-for-developers-project-74/actions)
 
 ## Requirement
 fll
@@ -69,3 +73,9 @@ make start # Open in browser: http://localhost:8080
 This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=js-fastify-blog).
 
 See most active contributors on [hexlet-friends](https://friends.hexlet.io/).
+=======
+### Hexlet tests and linter status:
+[![Actions Status](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Umeda13/devops-for-developers-project-74/actions)
+
+![CI](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
+>>>>>>> origin/main

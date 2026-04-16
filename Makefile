@@ -15,3 +15,5 @@ ci:
 
 env:
 	cp app/.env.example .env
+setup:
+	npm ci

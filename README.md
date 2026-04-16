@@ -1,71 +1,38 @@
-# JS Fastify Blog
+# Docker Compose
 
-[![Main](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml/badge.svg)](https://github.com/hexlet-components/js-fastify-blog/actions/workflows/main.yml)
+[![Actions Status](https://github.com/ilrosch/docker-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ilrosch/docker-project-74/actions) [![.github/workflows/push.yml](https://github.com/ilrosch/docker-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/ilrosch/docker-project-74/actions/workflows/push.yml)
 
-![CI](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)
 
-## Requirement
-fll
-* NodeJS v20.6.1lll
-* Sqlite или PostgreSQL
-
-## Commands
-
-```bash
-make install
-make dev
-```
-
-## Run tests with Postgres
-
-To run tests with Postgres, you need to edit *config/config.cjs* and under the `test` key comment out the use of SQLite and uncomment the environment variables
-
-```js
-  // test: {
-  //   dialect: 'sqlite',
-  //   storage: './database.test.sqlite',
-  // },
-  test: {
-    dialect: 'postgres',
-    database: process.env.DATABASE_NAME,
-    username: process.env.DATABASE_USERNAME,
-    password: process.env.DATABASE_PASSWORD,
-    port: process.env.DATABASE_PORT,
-    host: process.env.DATABASE_HOST,
-  },
-```
-
-Specify environment variables manually or prepare a *.env* file with the command
-
-```bash
-make prepare-env
-```
-
-In it specify the data to connect to the database
-
-```dotenv
-DATABASE_NAME=postgres
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=postgres
-DATABASE_PORT=5432
-DATABASE_HOST=localhost
-```
-
-## Running an application with Postgres (production)
-
-Export environment variables to work with the database or prepare a *.env* file with variables
-
-Run
-
-```bash
-make build # build assets
-make start # Open in browser: http://localhost:8080
-```
+[Ready image](https://hub.docker.com/r/ilrosch/docker-project-74) on Docker Hub
 
 ---
 
-[![Hexlet Ltd. logo](https://raw.githubusercontent.com/Hexlet/assets/master/images/hexlet_logo128.png)](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=js-fastify-blog)
+Docker is a programme that allows the operating system to run processes in an isolated environment based on specially created images. An image is an independent file system, a container is a running process in an isolated environment. Thanks to the kernel capabilities, the container sees its own list of processes, network, file system and so on. Why all this? Docker is a universal way to deliver an application, because everything you already need is inside the image. The process of building a programme from source can look like this:
 
-This repository is created and maintained by the team and the community of Hexlet, an educational project. [Read more about Hexlet](https://hexlet.io?utm_source=github&utm_medium=link&utm_campaign=js-fastify-blog).
+- Install dependencies under the operating system
+- Get the source code (download the archive or clone the repository)
+- Start compiling or building the project
 
-See most active contributors on [hexlet-friends](https://friends.hexlet.io/).
+This process can be non-trivial and not always fast or not doable at all. Docker allows you to simplify all of these steps to a single command.
+
+Docker Compose allows you to develop a project locally using Docker. Docker Compose can manage a set of containers, each of which is a service of the project: database, proxy server and so on. It allows you to describe dependencies between services. For example, the dependency of an application on a database. The configuration of Docker Compose is described in the file docker-compose.yml, lying in the root of the project.
+
+## Description
+In this project, students package a [js-fastify-blog](https://github.com/hexlet-components/js-fastify-blog) application in a Docker image. The application already uses the [12 factors methodology](https://12factor.net/), this minimises the differences between development and production environments.
+
+Docker Compose is used to set up the development environment, run tests and CI. Upon successful CI execution, an image of the application is built and published to hub.docker.com. This makes setting up and running the application a matter of minutes, without instructions.
+
+
+```console
+  # Run application development
+  make start
+
+  # Run build application (production)
+  make build
+
+  # Run tests (on Postgres)
+  make ci 
+
+  # Push on Docker Hub
+  make push
+```

@@ -1,9 +1,10 @@
 # Docker Compose
 
-[![Actions Status](https://github.com/ilrosch/docker-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ilrosch/docker-project-74/actions) [![.github/workflows/push.yml](https://github.com/ilrosch/docker-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/ilrosch/docker-project-74/actions/workflows/push.yml)
+[![Actions Status](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Umeda13/devops-for-developers-project-74/actions) [![.github/workflows/push.yml](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/push.yml/badge.svg)](https://github.com/Umeda13/devops-for-developers-project-74/actions/workflows/push.yml)
 
 
-[Ready image](https://hub.docker.com/r/ilrosch/docker-project-74) on Docker Hub
+
+[Ready image](https://hub.docker.com//Umeda13/devops-for-developers-project-74) on Docker Hub
 
 ---
 
